@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 from PIL import Image
 
 
-# token_30hari = "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"
+
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
