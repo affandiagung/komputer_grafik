@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Crop App</title>
+</head>
+<body>
+    <h1>Image Crop App</h1>
+
+    <h2>Crop Image</h2>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" style="max-width: 200px;max-height: 200px;">
+    <form action="/crop/{{ filename }}" method="POST">
+        <label for="size">Crop Size (pixels):</label>
+        <input type="number" name="size" id="size" required>
+        <br>
+        <label for="position">Crop Position:</label>
+        <select name="position" id="position" required>
+            <option value="top_left">Top Left</option>
+            <option value="top_center">Top Center</option>
+            <option value="top_right">Top Right</option>
+            <option value="center_left">Center Left</option>
+            <option value="center">Center</option>
+            <option value="center_right">Center Right</option>
+            <option value="bottom_left">Bottom Left</option>
+            <option value="bottom_center">Bottom Center</option>
+            <option value="bottom_right">Bottom Right</option>
+        </select>
+        <br>
+        <input type="submit" value="Crop Image">
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Crop App</title>
+</head>
+<body>
+    <h1>Image Crop App</h1>
+
+    <h2>Result</h2>
+
+    <p>Hasil Crop:</p>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" style="max-width: 200px;max-height: 200px;">
+
+  
+
+    <form action="{{ url_for('index') }}" method="GET">
+        <button class="btn " type="submit">Back to Upload</button>
+    </form>
+    
+</body>
+</html>
